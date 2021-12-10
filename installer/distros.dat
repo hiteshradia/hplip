@@ -9420,7 +9420,7 @@ udev_mode_fix=1
 ppd_dir=/usr/share/ppd/HP
 fix_ppd_symlink=0
 drv_dir=/usr/share/cups/drv/HP
-ui_toolkit=qt5
+ui_toolkit=qt4
 native_cups=1
 policykit=0
 # This libdir_path will be used only for 64 bit machine.
