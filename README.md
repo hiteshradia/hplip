@@ -7,8 +7,10 @@ Cloned from https://sourceforge.net/projects/hplip/files/hplip/3.20.9/
 This Repo is published Under the same License as HPLIP
 https://developers.hp.com/hp-linux-imaging-and-printing/IsHPLIPLicensed.html
 
-## NO LIABILITY for any consequences of using ths software
+## DISCLAIMER:- NO LIABILITY for any consequences of using ths software
 
+## Note
+**I have installed this on raspberry pi Zero W with raspbian OS lite andusing an HP 2300 series USB (non Wifi) Printer/ Scanner to Print and Scan over Wifi as a Shared Printer. Try this repo and report ansy issues you face. Pease include your Board, OS and Python/qt version with full logs when reporting, Enjoy/!**
 
 ## How to install hplip 3.20.9 on raspberry pi raspbian lite OS
 
@@ -239,5 +241,45 @@ Running './configure --with-hpppddir=/usr/share/ppd/HP --prefix=/usr --disable-q
 >
 >Running 'make'
 >Please wait, this may take several minutes\.\.\.
+>Command completed successfully.
+>
+>Running 'su -c "make install"'
+>Please wait, this may take several minutes...
+>Command completed successfully.
+>
+>
+>Build complete.
+>
+>
+>
+>POST-BUILD COMMANDS
+>
+>-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+>
+>OK
+>
+>
+>HPLIP UPDATE NOTIFICATION
+>
+>-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+>
+**Do you want to check for HPLIP updates\?. (y=yes\*\, n=no) \: n**
+>
+>
+>RESTART OR RE-PLUG IS REQUIRED
+>
+>-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+>
+>If you are installing a USB connected printer, and the printer was plugged in when you started this installer, you will need to either restart your PC or unplug >and
+>re-plug in your printer (USB cable only). If you choose to restart, run this command after restarting: hp-setup (Note: If you are using a parallel connection, >you will
+>have to restart your PC. If you are using network/wireless, you can ignore and continue).
+>
+**Restart or re-plug in your printer (r=restart, p=re-plug in\*, i=ignore/continue, q=quit) \: r**
+  
+ #### \*\* At the end if hp-setup fails, you may need to run hp-setup as root/sudo. See LOG/WORKINGLOG.txt for details.
+ 
+ **After doing cupsctl --share-printers able to see the printer in CUPS Web https\:\/\/\<IP of raspberryPi>\\:631**
+ 
 
-
+  
+  ![cups_rpi](https://github.com/hiteshradia/hplip/raw/main/LOG/cups_rpi.jpg)
