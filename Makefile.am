@@ -595,7 +595,8 @@ hpcups_SOURCES = prnt/hpcups/HPCupsFilter.cpp prnt/hpcups/HPCupsFilter.h prnt/hp
 	prnt/hpcups/ImageProcessor.h
 
 hpcups_CXXFLAGS = $(APDK_ENDIAN_FLAG) $(DBUS_CFLAGS)
-hpcups_LDADD = -L./prnt/hpcups/ -ljpeg -ldl -lImageProcessor -lcups -lcupsimage -lz $(DBUS_LIBS)
+#hpcups_LDADD = -L./prnt/hpcups/ -ljpeg -ldl -lImageProcessor -lcups -lcupsimage -lz $(DBUS_LIBS)
+hpcups_LDADD = -L./prnt/hpcups/ -ljpeg -ldl -lcups -lcupsimage -lz $(DBUS_LIBS)
 #else
 #hpcupsdir = $(cupsfilterdir)
 #hpcups_PROGRAMS = hpcups

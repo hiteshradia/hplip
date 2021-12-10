@@ -31,7 +31,9 @@
 \*****************************************************************************/
 
 #include "HPCupsFilter.h"
+#if 0
 #include "ImageProcessor.h"
+#endif /* NOimageprocessor */
 
 #include <signal.h>
 #include <sys/wait.h>
@@ -637,15 +639,18 @@ int HPCupsFilter::processRasterData(cups_raster_t *cups_raster)
 
 
     sprintf(hpPreProcessedRasterFile, "%s/hp_%s_cups_SwapedPagesXXXXXX",CUPS_TMP_DIR, m_JA.user_name);
+#if 0
     image_processor_t* imageProcessor = imageProcessorCreate();
+#endif /* NOimageprocessor */
 
     while (cupsRasterReadHeader2(cups_raster, &cups_header))
     {
-
+#if 0
         IMAGE_PROCESSOR_ERROR result = imageProcessorStartPage(imageProcessor, &cups_header);
         if (result != IPE_SUCCESS){
             dbglog("DEBUG: imageProcessorStartPage failed result = %d\n", result);
         }
+#endif /* NOimageprocessor */
 
         current_page_number++;
 
@@ -744,11 +749,12 @@ int HPCupsFilter::processRasterData(cups_raster_t *cups_raster)
             cupsRasterReadPixels (cups_raster, m_pPrinterBuffer, cups_header.cupsBytesPerLine);
             color_raster = rgbRaster;
             black_raster = kRaster;
-
+#if 0
             result = imageProcessorProcessLine(imageProcessor, m_pPrinterBuffer, cups_header.cupsBytesPerLine);
             if (result != IPE_SUCCESS){
                 dbglog("DEBUG: imageProcessorProcessLine failed result = %d\n", result);
             }
+#endif /* NOimageprocessor */
 
 
             if ((y == 0) && !is_ljmono) {
@@ -779,11 +785,12 @@ int HPCupsFilter::processRasterData(cups_raster_t *cups_raster)
                 WriteBMPRaster (kfp, black_raster, cups_header.cupsWidth/8, BLACK_RASTER);
             }
         }  // for() loop end
-
+#if 0
         result = imageProcessorEndPage(imageProcessor);
         if (result != IPE_SUCCESS){
                 dbglog("DEBUG: imageProcessorEndPage failed result = %d\n", result);
         }
+#endif /* NOimageprocessor */
 
 
         m_Job.NewPage();
@@ -799,8 +806,9 @@ int HPCupsFilter::processRasterData(cups_raster_t *cups_raster)
         kRaster = NULL;
         rgbRaster = NULL;
     }
-
+#if 0
     imageProcessorDestroy(imageProcessor);
+#endif /* NOimageprocessor */
 
     unlink(hpPreProcessedRasterFile);
     return ret_status;

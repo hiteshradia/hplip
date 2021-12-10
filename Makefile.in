@@ -4873,7 +4873,8 @@ libapdk_la_CFLAGS = $(libapdk_la_CXXFLAGS) -Iprnt/hpijs
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/ImageProcessor.h
 
 @HPCUPS_INSTALL_TRUE@hpcups_CXXFLAGS = $(APDK_ENDIAN_FLAG) $(DBUS_CFLAGS)
-@HPCUPS_INSTALL_TRUE@hpcups_LDADD = -L./prnt/hpcups/ -ljpeg -ldl -lImageProcessor -lcups -lcupsimage -lz $(DBUS_LIBS)
+#@HPCUPS_INSTALL_TRUE@hpcups_LDADD = -L./prnt/hpcups/ -ljpeg -ldl -lImageProcessor -lcups -lcupsimage -lz $(DBUS_LIBS)
+@HPCUPS_INSTALL_TRUE@hpcups_LDADD = -L./prnt/hpcups/ -ljpeg -ldl -lcups -lcupsimage -lz $(DBUS_LIBS)
 #else
 #hpcupsdir = $(cupsfilterdir)
 #hpcups_PROGRAMS = hpcups
