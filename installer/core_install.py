@@ -1649,38 +1649,32 @@ class CoreInstall(object):
             cmnd = "make install"
             log.info("cmnd:%s" % cmnd)
             return [self.configure(bClassDriver),
-                    'make clean',
                     'make', self.passwordObj.getAuthCmd() % cmnd]
 
         elif option == 't':
             cmnd = "make dist"
             log.info("cmnd:%s" % cmnd)
             return [self.configure(bClassDriver),
-                    'make clean',
                     'make', cmnd]
 
         elif option == 'r':
             cmnd = "make rpm"
             log.info("cmnd:%s" % cmnd)
             return [self.configure(bClassDriver),
-                    'make clean',
                     'make', cmnd]
 
         elif option == 'b':
             cmnd = "make deb"
             log.info("cmnd:%s" % cmnd)
             return [self.configure(bClassDriver),
-                    'make clean',
                     'make', self.passwordObj.getAuthCmd() % cmnd]
 
         elif option == 'd':
             return [self.configure(bClassDriver),
-                    'make clean',
                     'make',
                     self.passwordObj.getAuthCmd() % 'make install']
         else:
             return [self.configure(bClassDriver),
-                    'make clean',
                     'make',
                     self.passwordObj.getAuthCmd() % 'make install']
 
