@@ -1,0 +1,377 @@
+## CHECKOUT
+pi@raspberrypi:~/gitcheckout $ git clone https://github.com/hiteshradia/hplip.git
+Cloning into 'hplip'...
+remote: Enumerating objects: 2607, done.
+remote: Counting objects: 100% (2607/2607), done.
+remote: Compressing objects: 100% (2109/2109), done.
+remote: Total 2607 (delta 486), reused 2596 (delta 483), pack-reused 0
+Receiving objects: 100% (2607/2607), 24.52 MiB | 1.06 MiB/s, done.
+Resolving deltas: 100% (486/486), done.
+Checking out files: 100% (2576/2576), done.
+pi@raspberrypi:~/gitcheckout $ cd hplip/
+
+## INSTALL
+pi@raspberrypi:~/gitcheckout/hplip $ ./install.py -n
+
+HP Linux Imaging and Printing System (ver. 3.20.9)
+HPLIP Installer ver. 5.1
+
+Copyright (c) 2001-18 HP Development Company, LP
+This software comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to distribute it
+under certain conditions. See COPYING file for more details.
+
+Installer log saved in: hplip-install_Fri-10-Dec-2021_19:21:15.log
+
+\
+note: Defaults for each question are maked with a '*'. Press <enter> to accept the default.
+error: debian-10.11 version is not supported, so all dependencies may not be installed. However trying to install using debian-10.4 version packages.
+
+Press 'y' to continue auto installation. Press 'n' to quit auto instalation(y=yes, n=no*): y
+
+
+INSTALLATION MODE
+-----------------
+Automatic mode will install the full HPLIP solution with the most common options.
+Custom mode allows you to choose installation options to fit specific requirements.
+
+Please choose the installation mode (a=automatic*, c=custom, q=quit) : c
+
+
+INTRODUCTION
+------------
+This installer will install HPLIP version 3.20.9 on your computer.
+Please close any running package management systems now (YaST, Adept, Synaptic, Up2date, etc).
+
+
+DISTRO/OS CONFIRMATION
+----------------------
+Distro appears to be Debian 10.11.
+
+Is "Debian 10.11" your correct distro/OS and version (y=yes*, n=no, q=quit) ? n
+
+
+DISTRO/OS SELECTION
+-------------------
+
+Choose the name of the distro/OS that most closely matches your system:
+
+Num.  Distro/OS Name          
+----  ------------------------
+0     Mepis                   
+1     Debian                  
+2     SUSE Linux              
+3     Mandriva Linux          
+4     Fedora                  
+5     Red Hat                 
+6     Red Hat Enterprise Linux
+7     Ubuntu                  
+8     PCLinuxOS               
+9     Linux Mint              
+10    gOS                     
+11    Linpus Linux            
+12    Manjaro Linux           
+13    IGOS                    
+14    Boss                    
+15    Linux From Scratch      
+
+Enter number 0...15 (q=quit) ?1
+
+Choose the version of "Debian" that most closely matches your system:
+
+Num.  Distro/OS Version                       
+----  ----------------------------------------
+0     Unknown or not listed                   
+1     10.0 ("Buster", Released 22/07/2017)    
+2     10.1 ("Buster", Released 22/07/2017)    
+3     10.2 ("Buster", Released 22/07/2017)    
+4     10.3 ("Buster", Released 08/02/2020)    
+5     10.4 ("Buster", Released 09/05/2020)    
+6     6.0 ("Squeeze")                         
+7     6.0.1 ("Squeeze")                       
+8     6.0.10 ("Squeeze")                      
+9     6.0.2 ("Squeeze")                       
+10    6.0.3 ("Squeeze")                       
+11    6.0.4 ("Squeeze")                       
+12    6.0.5 ("Squeeze")                       
+13    6.0.6 ("Squeeze")                       
+14    6.0.7 ("Squeeze")                       
+15    6.0.8 ("Squeeze")                       
+16    6.0.9 ("Squeeze")                       
+17    7.0 ("Wheezy", Released 04/05/2013)     
+18    7.1 ("Wheezy", Released 04/05/2013)     
+19    7.2 ("Wheezy", Released 04/05/2013)     
+20    7.3 ("Wheezy", Released 04/05/2013)     
+21    7.4 ("Wheezy", Released 04/05/2013)     
+22    7.5 ("Wheezy", Released 04/05/2013)     
+23    7.6 ("Wheezy", Released 04/05/2013)     
+24    7.7 ("Wheezy", Released 04/05/2013)     
+25    7.8 ("Wheezy", Released 04/05/2013)     
+26    7.9 ("Wheezy", Released 04/05/2013)     
+27    8.0 ("Jessie", Released 04/05/2015)     
+28    8.1 ("Jessie", Released 04/05/2015)     
+29    8.2 ("Jessie", Released 04/05/2015)     
+30    8.3 ("Jessie", Released 04/05/2015)     
+31    8.4 ("Jessie", Released 04/05/2016)     
+32    8.5 ("Jessie", Released 27/08/2016)     
+33    8.6 ("Jessie", Released 22/10/2016)     
+34    8.7 ("Jessie", Released 22/10/2016)     
+35    8.8 ("Jessie", Released 31/05/2017)     
+36    9.1 ("Stretch", Released 22/07/2017)    
+37    9.2 ("Stretch", Released 7/10/2017)     
+38    9.3 ("Stretch", Released 9/12/2017)     
+39    9.4 ("Stretch", Released 10/3/2018)     
+40    9.5 ("Stretch", Released 10/3/2018)     
+41    9.6 ("Stretch", Released 10/11/2018)    
+42    9.7 ("Stretch", Released 23/1/2019)     
+43    9.8 ("Stretch", Released 16/2/2019)     
+44    9.9 ("Stretch", Released 22/07/2017)    
+
+Enter number 0...44 (q=quit) ?5
+
+Distro set to: Debian 10.4
+
+
+DRIVER OPTIONS
+--------------
+Would you like to install Custom Discrete Drivers or Class Drivers ( 'd'= Discrete Drivers*,'c'= Class Drivers,'q'= Quit)?   : d
+
+Initializing. Please wait...
+
+
+SELECT HPLIP OPTIONS
+--------------------
+You can select which HPLIP options to enable. Some options require extra dependencies.
+
+Do you wish to enable 'Network/JetDirect I/O' (y=yes*, n=no, q=quit) ? y
+Do you wish to enable 'Graphical User Interfaces (Qt4)' (y=yes*, n=no, q=quit) ? n
+Do you wish to enable 'PC Send Fax support' (y=yes*, n=no, q=quit) ? n
+Do you wish to enable 'Scanning support' (y=yes*, n=no, q=quit) ? y
+Do you wish to enable 'HPLIP documentation (HTML)' (y=yes*, n=no, q=quit) ? n
+
+
+ENTER ROOT/SUPERUSER PASSWORD
+-----------------------------
+Please enter the root/superuser password: 
+ 
+
+INSTALLATION NOTES
+------------------
+NOTE: Disable the CD Sources in your apt sources.list or the install will fail and hang.
+
+Please read the installation notes. Press <enter> to continue or 'q' to quit: 
+
+
+SECURITY PACKAGES
+-----------------
+AppArmor is installed. 
+AppArmor protects the application from external intrusion attempts making the application secure
+
+Would you like to have this installer install the hplip specific policy/profile (y=yes*, n=no, q=quit) ? y
+
+
+RUNNING PRE-INSTALL COMMANDS
+----------------------------
+OK
+
+
+RUNNING HPLIP LIBS REMOVE COMMANDS
+----------------------------------
+sudo apt-get remove libhpmud0 libsane-hpaio
+sudo apt-get remove libhpmud0 libsane-hpaio ( hp_libs_remove step 1)
+OK
+
+
+RUNNING SCANJET DEPENDENCY COMMANDS
+-----------------------------------
+su -c "apt-get install --force-yes -y python-pip" (Scanjet-depend step 1)
+su -c "pip install --upgrade pip" (Scanjet-depend step 2)
+su -c "apt-get install --force-yes -y libleptonica-dev" (Scanjet-depend step 3)
+su -c "apt-get install --force-yes -y tesseract-ocr" (Scanjet-depend step 4)
+su -c "apt-get install --force-yes -y libtesseract-dev" (Scanjet-depend step 5)
+su -c "pip install tesserocr" (Scanjet-depend step 6)
+su -c "apt-get install --force-yes -y libzbar-dev" (Scanjet-depend step 7)
+su -c "apt-get install --force-yes -y python-zbar" (Scanjet-depend step 8)
+su -c "apt-get install --force-yes -y python-opencv" (Scanjet-depend step 9)
+su -c "apt-get install --force-yes -y python-pypdf2" (Scanjet-depend step 10)
+su -c "pip install imutils" (Scanjet-depend step 11)
+su -c "pip install pypdfocr" (Scanjet-depend step 12)
+su -c "pip install scikit-image" (Scanjet-depend step 13)
+su -c "pip install scipy" (Scanjet-depend step 14)
+OK
+
+
+READY TO BUILD AND INSTALL
+--------------------------
+Ready to perform build and install. Press <enter> to continue or 'q' to quit: 
+
+
+PRE-BUILD COMMANDS
+------------------
+OK
+
+
+BUILD AND INSTALL
+-----------------
+Running './configure --with-hpppddir=/usr/share/ppd/HP --prefix=/usr --disable-qt4 --disable-qt5 --disable-doc-build --disable-cups-ppd-install --disable-foomatic-drv-install --disable-libusb01_build --disable-foomatic-ppd-install --disable-hpijs-install --disable-class-driver --disable-udev_sysfs_rules --disable-policykit --enable-cups-drv-install --enable-hpcups-install --enable-network-build --enable-dbus-build --enable-scan-build --disable-fax-build --enable-apparmor_build'
+Please wait, this may take several minutes...
+Command completed successfully.
+
+Running 'make'
+Please wait, this may take several minutes...
+Command completed successfully.
+
+Running 'su -c "make install"'
+Please wait, this may take several minutes...
+Command completed successfully.
+
+
+Build complete.
+
+
+
+POST-BUILD COMMANDS
+-------------------
+OK
+
+
+HPLIP UPDATE NOTIFICATION
+-------------------------
+Do you want to check for HPLIP updates?. (y=yes*, n=no) : n
+
+
+RESTART OR RE-PLUG IS REQUIRED
+------------------------------
+If you are installing a USB connected printer, and the printer was plugged in when you started this installer, you will need to either restart your PC or unplug and     
+re-plug in your printer (USB cable only). If you choose to restart, run this command after restarting: hp-setup (Note: If you are using a parallel connection, you will  
+have to restart your PC. If you are using network/wireless, you can ignore and continue).                                                                                
+
+Restart or re-plug in your printer (r=restart, p=re-plug in*, i=ignore/continue, q=quit) : r
+Please unplug and re-plugin your printer now.  Press <enter> to continue or 'q' to quit: 
+
+
+PRINTER SETUP
+-------------
+Would you like to setup a printer now (y=yes*, n=no, q=quit) ? y
+Please make sure your printer is connected and powered on at this time.
+Do you want to setup printer in GUI mode? (u=GUI mode*, i=Interactive mode) : i
+Running 'hp-setup  -i' command....
+
+HP Linux Imaging and Printing System (ver. 3.20.9)
+Printer/Fax Setup Utility ver. 9.0
+
+Copyright (c) 2001-18 HP Development Company, LP
+This software comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to distribute it
+under certain conditions. See COPYING file for more details.
+
+(Note: Defaults for each question are maked with a '*'. Press <enter> to accept the default.)
+
+
+--------------------------------
+| SELECT CONNECTION (I/O) TYPE |
+--------------------------------
+
+  Num       Connection  Description                                               
+            Type                                                                  
+  --------  ----------  ----------------------------------------------------------
+  0*        usb         Universal Serial Bus (USB)                                
+  1         net         Network/Ethernet/Wireless (direct connection or JetDirect)
+
+Enter number 0...1 for connection type (q=quit, enter=usb*) ? usb
+error: Please enter a number between 0 and 1, or "q" to quit.
+
+Enter number 0...1 for connection type (q=quit, enter=usb*) ? 0
+
+Using connection type: usb
+
+error: No device selected/specified or that supports this functionality.
+error: hp-setup failed. Please run hp-setup manually.
+
+
+RE-STARTING HP_SYSTRAY
+----------------------
+pi@raspberrypi:~/gitcheckout/hplip $ 
+HP Linux Imaging and Printing System (ver. 3.20.9)
+System Tray Status Service ver. 2.0
+
+Copyright (c) 2001-18 HP Development Company, LP
+This software comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to distribute it
+under certain conditions. See COPYING file for more details.
+
+warning: No display found.
+error: hp-systray requires Qt4 GUI and DBus support. Exiting.
+
+
+*** Here you may need to start 'hp-setup -i' as root
+
+
+***
+pi@raspberrypi:~/gitcheckout/hplip $ sudo hp-setup -i
+
+HP Linux Imaging and Printing System (ver. 3.20.9)
+Printer/Fax Setup Utility ver. 9.0
+
+Copyright (c) 2001-18 HP Development Company, LP
+This software comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to distribute it
+under certain conditions. See COPYING file for more details.
+
+(Note: Defaults for each question are maked with a '*'. Press <enter> to accept the default.)
+
+
+--------------------------------
+| SELECT CONNECTION (I/O) TYPE |
+--------------------------------
+
+  Num       Connection  Description                                               
+            Type                                                                  
+  --------  ----------  ----------------------------------------------------------
+  0*        usb         Universal Serial Bus (USB)                                
+  1         net         Network/Ethernet/Wireless (direct connection or JetDirect)
+
+Enter number 0...1 for connection type (q=quit, enter=usb*) ? 
+
+Using connection type: usb
+
+ 
+Setting up device: hp:/usb/DeskJet_2300_series?serial=CN17O234RB
+
+
+
+---------------------
+| PRINT QUEUE SETUP |
+---------------------
+
+
+Please enter a name for this print queue (m=use model name:'DeskJet_2300'*, q=quit) ?
+Using queue name: DeskJet_2300
+Locating PPD file... Please wait.
+
+Found PPD file: drv:///hp/hpcups.drv/hp-deskjet_2300_series.ppd
+Description: 
+
+Note: The model number may vary slightly from the actual model number on the device.
+
+Does this PPD file appear to be the correct one (y=yes*, n=no, q=quit) ? y
+Enter a location description for this printer (q=quit) ?myhp
+Enter additonal information or notes for this printer (q=quit) ?myhpusboverwifi
+
+Adding print queue to CUPS:
+Device URI: hp:/usb/DeskJet_2300_series?serial=CN17O234RB
+Queue name: DeskJet_2300
+PPD file: drv:///hp/hpcups.drv/hp-deskjet_2300_series.ppd
+Location: myhp
+Information: myhpusboverwifi
+
+
+---------------------
+| PRINTER TEST PAGE |
+---------------------
+
+
+Would you like to print a test page (y=yes*, n=no, q=quit) ? n
+
+Done.
+
