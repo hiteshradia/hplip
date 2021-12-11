@@ -20,6 +20,12 @@ Raspi OS lite Debian buster 10.11.**
 
 https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip
 
+**if you wish to enable wifi and ssh in a headless rpi see the below hints**
+```
+https://howchoo.com/g/ndy1zte2yjn/how-to-set-up-wifi-on-your-raspberry-pi-without-ethernet
+https://howchoo.com/g/ote0ywmzywj/how-to-enable-ssh-on-raspbian-without-a-screen
+```
+
 **2. Set root password on raspberry pi.(will be needed during installation)**
 ```
 pi@raspberrypi:~ $ sudo -s
@@ -32,13 +38,28 @@ passwd\: password updated successfully
 ```
 sudo apt-get -y update
 sudo apt-get -y upgrade
+sudo reboot
+
+sudo apt-get install -y ghostscript ghostscript-cups ghostscript-x libcups2-dev cups-bsd cups-client libusb-1.0.0-dev libtool libtool-bin libcupsimage2 libcupsimage2-dev libjpeg62-turbo-dev libssl-dev libsnmp-dev snmp libsane-dev libavahi-client-dev libavahi-core-dev libavahi-common-dev sane avahi-utils sane-utils xsane cups python-qt4-dbus python-notify
 
 sudo apt-get install -y python-pil
-sudo apt-get install python-skimage
+sudo apt-get install -y python-skimage
+sudo apt-get install -y git
 ```
 ### INSTALL
-**4. git checkout this repo and run install.py**
+**4. git clone this repo and run install.py**
 ```
+git clone https://github.com/hiteshradia/hplip.git
+Cloning into 'hplip'...
+remote: Enumerating objects: 2646, done.
+remote: Counting objects: 100% (2646/2646), done.
+remote: Compressing objects: 100% (2136/2136), done.
+remote: Total 2646 (delta 510), reused 2618 (delta 495), pack-reused 0
+Receiving objects: 100% (2646/2646), 24.71 MiB | 1.05 MiB/s, done.
+Resolving deltas: 100% (510/510), done.
+Checking out files: 100% (2578/2578), done.
+
+
 cd hplip/
 ./install.py  -n
 ```
@@ -145,7 +166,7 @@ cd hplip/
 >
 **Do you wish to enable \'Network\/JetDirect I\/O\' \(y\=yes\*, n\=no, q\=quit\) \? y**
   
-**Do you wish to enable \'Graphical User Interfaces (Qt4)\' (y=yes\*, n=no, q=quit) ? n**
+**Do you wish to enable \'Graphical User Interfaces (Qt4)\' (y=yes\*, n=no, q=quit) ? y**
   
 **Do you wish to enable 'PC Send Fax support' (y=yes\*, n=no, q=quit) ? n**
   
@@ -198,6 +219,23 @@ cd hplip/
 >OK
 >
 >
+> MISSING DEPENDENCIES
+>
+>-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+>
+>Following dependencies are not installed. HPLIP will not work if all REQUIRED dependencies are not installed and some of the HPLIP features will not work if >OPTIONAL dependencies are not installed.
+>Package-Name         Component            Required/Optional
+>
+**Do you want to install these missing dependencies (y=yes\*, n=no, q=quit) ? y**
+>
+>
+>INSTALL MISSING REQUIRED DEPENDENCIES
+>
+>-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+>
+>note: Installation of dependencies requires an active internet connection.
+>
+>
 >RUNNING SCANJET DEPENDENCY COMMANDS
 >
 >-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
@@ -236,7 +274,7 @@ cd hplip/
 >-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 >
 ```
-Running './configure --with-hpppddir=/usr/share/ppd/HP --prefix=/usr --disable-qt4 --disable-qt5 --disable-doc-build --disable-cups-ppd-install --disable-foomatic-drv-install --disable-libusb01_build --disable-foomatic-ppd-install --disable-hpijs-install --disable-class-driver --disable-udev_sysfs_rules --disable-policykit --enable-cups-drv-install --enable-hpcups-install --enable-network-build --enable-dbus-build --enable-scan-build --disable-fax-build --enable-apparmor_build'
+Running './configure --with-hpppddir=/usr/share/ppd/HP --prefix=/usr --enable-qt4 --disable-qt5 --disable-doc-build --disable-cups-ppd-install --disable-foomatic-drv-install --disable-libusb01_build --disable-foomatic-ppd-install --disable-hpijs-install --disable-class-driver --disable-udev_sysfs_rules --disable-policykit --enable-cups-drv-install --enable-hpcups-install --enable-network-build --enable-dbus-build --enable-scan-build --disable-fax-build --enable-apparmor_build'
 ```
 >
 >Please wait, this may take several minutes\.\.\.
