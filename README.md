@@ -21,13 +21,15 @@ Raspi OS lite Debian buster 10.11.**
 https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip
 
 **2. Set root password on raspberry pi.(will be needed during installation)**
+```
 pi@raspberrypi:~ $ sudo -s
 root@raspberrypi:/home/pi# passwd
 New password:
 Retype new password:
-passwd: password updated successfully
-
+passwd\: password updated successfully
+```
 **3 Get dependencies, as some commands within hlip installation are different**
+
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
