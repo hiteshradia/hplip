@@ -29,18 +29,19 @@ Retype new password:
 passwd\: password updated successfully
 ```
 **3 Get dependencies, as some commands within hlip installation are different**
-
+```
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
 sudo apt-get install -y python-pil
 sudo apt-get install python-skimage
-
+```
 ### INSTALL
 **4. git checkout this repo and run install.py**
+```
 cd hplip/
 ./install.py  -n
-
+```
 ## Answer the questions asked by installer as below.
 
 
