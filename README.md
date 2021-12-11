@@ -44,7 +44,7 @@ sudo apt-get install -y ghostscript ghostscript-cups ghostscript-x libcups2-dev 
 
 sudo apt-get install -y python-pil
 sudo apt-get install -y python-skimage
-sudo apt-get install -y git
+sudo apt-get install -y git vim
 ```
 ### INSTALL
 **4. git clone this repo and run install.py**
